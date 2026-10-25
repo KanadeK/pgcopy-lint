@@ -15,6 +15,7 @@
   ],
   "result": "passed",
   "runtime_dependencies": [],
+  "source_fingerprint": "240e96a74c1e9aea60315350a81289de421dc614efc18558956ac8805a5b7a97",
   "tests_run": 32,
   "postgres_differential_enabled": true,
   "limits": "Local results are Windows only; other environments require CI results."

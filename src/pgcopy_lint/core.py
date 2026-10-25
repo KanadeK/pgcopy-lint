@@ -231,7 +231,17 @@ def audit(
             for count, (field, start) in enumerate(split_fields(raw, delimiter[0]), 1):
                 result["fields"] += 1
 
-                def emit(code, position, severity, start=start, count=count, is_null=field == null):
+                def emit(
+                    code,
+                    position,
+                    severity,
+                    start=start,
+                    count=count,
+                    is_null=field == null,
+                    offset=offset,
+                    line=line,
+                    record=record,
+                ):
                     if not is_null or code == "end-marker-in-data":
                         issue(code, offset + start + position, line, record, count, severity)
 
